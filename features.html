@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>Features — Bryndis</title>
+  <meta name="description" content="A closer look at how Bryndis keeps you connected. Hold-to-alert SOS, trusted contacts, check-in timer, find-your-car, plus optional Date Buddy and Rideshare Tracker." />
+  <meta name="theme-color" content="#1F4332" />
+  <link rel="canonical" href="https://bryndis.com.au/features.html" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%231F4332'/%3E%3Cpath d='M30 28 L30 72 Q30 78 36 78 L60 78 Q75 78 75 64 Q75 54 66 50 Q72 47 72 38 Q72 28 58 28 Z M42 39 L56 39 Q60 39 60 43 Q60 47 56 47 L42 47 Z M42 57 L58 57 Q63 57 63 62 Q63 67 58 67 L42 67 Z' fill='%23F5EFE4'/%3E%3C/svg%3E" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..600,30..100&family=Nunito:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .feature-detail {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: clamp(2rem, 6vw, 6rem);
+      align-items: start;
+      padding: clamp(3rem, 7vw, 6rem) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .feature-detail.reverse { grid-template-columns: 1.4fr 1fr; }
+    .feature-detail.reverse .feature-visual { order: 2; }
+    @media (max-width: 880px) {
+      .feature-detail, .feature-detail.reverse { grid-template-columns: 1fr; }
+      .feature-detail.reverse .feature-visual { order: 0; }
+    }
+    .feature-detail h2 { margin-top: 1rem; }
+    .feature-detail .lede { margin-top: 1.25rem; }
+    .feature-detail .bullets {
+      margin-top: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .feature-detail .bullets li {
+      display: grid;
+      grid-template-columns: 20px 1fr;
+      gap: 0.85rem;
+      font-size: 0.95rem;
+      color: var(--ink-muted);
+    }
+    .feature-detail .bullets li svg {
+      width: 18px; height: 18px;
+      color: var(--gold);
+      margin-top: 5px;
+    }
+    .feature-detail .bullets li strong {
+      color: var(--forest);
+      font-weight: 600;
+    }
+    .feature-visual {
+      aspect-ratio: 4 / 5;
+      background: var(--cream-warm);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .feature-visual::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at 30% 30%, rgba(184, 147, 90, 0.08), transparent 60%);
+      pointer-events: none;
+    }
+    .feature-visual svg { width: 60%; max-width: 220px; color: var(--forest); position: relative; z-index: 1; }
+    .module-tag {
+      display: inline-block;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 0.35rem 0.75rem;
+      border-radius: 99px;
+      background: var(--cream-dark);
+      color: var(--moss);
+      margin-bottom: 1rem;
+    }
+    .module-tag.paid { background: var(--gold); color: var(--forest-dark); }
+  </style>
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+        <rect width="100" height="100" rx="22" fill="#1F4332"/>
+        <path d="M30 28 L30 72 Q30 78 36 78 L60 78 Q75 78 75 64 Q75 54 66 50 Q72 47 72 38 Q72 28 58 28 Z M42 39 L56 39 Q60 39 60 43 Q60 47 56 47 L42 47 Z M42 57 L58 57 Q63 57 63 62 Q63 67 58 67 L42 67 Z" fill="#F5EFE4"/>
+      </svg>
+      Bryndis
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+      <a href="features.html" aria-current="page">Features</a>
+      <a href="support.html">Support</a>
+      <a href="privacy.html">Privacy</a>
+      <a class="btn btn-primary" href="index.html#download">Download</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+  <header class="page-header">
+    <div class="wrap">
+      <span class="eyebrow">Features</span>
+      <h1>Quiet tools<br />for loud moments.</h1>
+      <p class="lede">
+        Bryndis is shaped around one question: what would you actually use, in the moment you actually needed it? Four free core features, two paid modules for specific situations, all built on the same two-second, one-thumb principle.
+      </p>
+    </div>
+  </header>
+
+  <!-- SOS -->
+  <section class="feature-detail">
+    <div class="wrap" style="display:contents;">
+      <div>
+        <span class="module-tag">Core · Free</span>
+        <span class="eyebrow">01 · Hold-to-alert SOS</span>
+        <h2>One gesture.<br />The whole circle.</h2>
+        <p class="lede">
+          Open Bryndis, press and hold the home tile for two seconds, and an alert lands with every trusted contact at the same time — push first, SMS fallback, complete with live GPS coordinates and a one-tap "I'm here" reply.
+        </p>
+        <ul class="bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Two-second hold.</strong> No accidental triggers. Cancel by lifting your thumb.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Live location.</strong> Coordinates with accuracy radius, refreshed every 30 seconds until the alert is cleared.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>SMS fallback.</strong> If push isn't acknowledged in five seconds, Twilio sends a clear SMS with the map link.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Always call 000 first in a life-threatening emergency.</strong> Bryndis is a companion to emergency services, not a replacement.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="120" cy="120" r="90" stroke="currentColor" opacity="0.15"/>
+          <circle cx="120" cy="120" r="70" stroke="currentColor" opacity="0.25"/>
+          <circle cx="120" cy="120" r="50" fill="#B8935A" stroke="none"/>
+          <text x="120" y="132" text-anchor="middle" font-family="Fraunces, serif" font-size="22" font-weight="400" fill="#14302A">SOS</text>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Trusted contacts -->
+  <section class="feature-detail reverse">
+    <div class="wrap" style="display:contents;">
+      <div class="feature-visual">
+        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="120" cy="90" r="22" fill="#1F4332" stroke="none"/>
+          <path d="M120 120 Q80 130 70 175" stroke="#5A7A6A"/>
+          <path d="M120 120 Q160 130 170 175" stroke="#5A7A6A"/>
+          <path d="M120 120 Q120 140 60 195" stroke="#5A7A6A"/>
+          <path d="M120 120 Q120 140 180 195" stroke="#5A7A6A"/>
+          <path d="M120 120 L120 200" stroke="#5A7A6A"/>
+          <circle cx="60" cy="195" r="14" fill="#B8935A" stroke="none"/>
+          <circle cx="180" cy="195" r="14" fill="#B8935A" stroke="none"/>
+          <circle cx="70" cy="175" r="14" fill="#B8935A" stroke="none"/>
+          <circle cx="170" cy="175" r="14" fill="#B8935A" stroke="none"/>
+          <circle cx="120" cy="200" r="14" fill="#B8935A" stroke="none"/>
+        </svg>
+      </div>
+      <div>
+        <span class="module-tag">Core · Free</span>
+        <span class="eyebrow">02 · Trusted contacts</span>
+        <h2>Up to five people.<br />No app required for them.</h2>
+        <p class="lede">
+          Bryndis isn't a social network. There are no friend requests, no profiles, no public anything. You add up to five trusted contacts by phone number — partners, parents, housemates, the friend who answers at 2am — and they're notified by SMS, no install needed.
+        </p>
+        <ul class="bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>SMS-first.</strong> Contacts don't need to download anything. The link in their SMS opens a live map in any browser.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>One-tap callback.</strong> Every alert SMS includes a tap-to-call number, so the first action is always a voice connection.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Priority order.</strong> Set a primary contact who is called automatically when SOS is triggered.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Consent built in.</strong> Adding someone sends them a one-time SMS that explains what they've been added to, with an easy opt-out.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Check-in timer -->
+  <section class="feature-detail">
+    <div class="wrap" style="display:contents;">
+      <div>
+        <span class="module-tag">Core · Free</span>
+        <span class="eyebrow">03 · Check-in timer</span>
+        <h2>If you don't check in,<br />they will.</h2>
+        <p class="lede">
+          Set a window before doing something where you'd want someone to notice if you didn't come back. Fifteen minutes, an hour, the length of a date. Bryndis nudges you for a check-in. If you don't respond, your trusted contacts are alerted — automatically.
+        </p>
+        <ul class="bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Flexible windows.</strong> Quick presets for 15min, 30min, 1hr, 2hr — or pick a custom time.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Friendly nudges.</strong> A check-in reminder at the right time, with a one-tap "I'm safe" button.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Auto-escalate on missed check-in.</strong> Two-minute grace, then full alert — same chain as SOS.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Cancel any time.</strong> One tap, no questions, no log left behind.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.5">
+          <circle cx="120" cy="120" r="80" stroke="#1F4332" stroke-width="2"/>
+          <path d="M120 120 L120 60" stroke="#1F4332" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M120 120 L170 145" stroke="#B8935A" stroke-width="3" stroke-linecap="round"/>
+          <circle cx="120" cy="120" r="5" fill="#1F4332" stroke="none"/>
+          <circle cx="120" cy="42" r="3" fill="#1F4332" stroke="none"/>
+          <circle cx="198" cy="120" r="3" fill="#1F4332" stroke="none"/>
+          <circle cx="120" cy="198" r="3" fill="#1F4332" stroke="none"/>
+          <circle cx="42" cy="120" r="3" fill="#1F4332" stroke="none"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Find car -->
+  <section class="feature-detail reverse">
+    <div class="wrap" style="display:contents;">
+      <div class="feature-visual">
+        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M120 30 L155 130 L120 110 L85 130 Z" fill="#B8935A" stroke="none"/>
+          <circle cx="120" cy="120" r="100" stroke="#1F4332" opacity="0.15"/>
+          <circle cx="120" cy="120" r="75" stroke="#1F4332" opacity="0.25"/>
+          <circle cx="120" cy="120" r="50" stroke="#1F4332" opacity="0.4"/>
+          <text x="120" y="195" text-anchor="middle" font-family="Nunito, sans-serif" font-size="10" font-weight="700" letter-spacing="2" fill="#5A7A6A">N · 47m</text>
+        </svg>
+      </div>
+      <div>
+        <span class="module-tag">Core · Free</span>
+        <span class="eyebrow">04 · Find your car</span>
+        <h2>Drop a pin.<br />Walk back, no signal needed.</h2>
+        <p class="lede">
+          Park, tap once. Bryndis remembers exactly where you left the car — and an AR compass overlay points you back through your camera view, with a glowing arrow that works even in a basement car park with no GPS.
+        </p>
+        <ul class="bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>One-tap park.</strong> Captures GPS, magnetic heading, and a quick photo for visual confirmation.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>AR compass.</strong> Camera overlay with a soft glowing arrow and distance counter. Works without an internet connection.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Designed for car parks.</strong> The feature most often used at night, alone, in unfamiliar buildings — built to perform there first.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Auto-clears.</strong> The pin clears when you start driving again. Nothing to remember to delete.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Date Buddy (paid) -->
+  <section class="feature-detail">
+    <div class="wrap" style="display:contents;">
+      <div>
+        <span class="module-tag paid">Optional · Paid module</span>
+        <span class="eyebrow">Date Buddy</span>
+        <h2>For first dates,<br />and second ones too.</h2>
+        <p class="lede">
+          A safety module designed for the moments around dating: meeting someone new, sharing your evening plans with one chosen friend, and a soft auto-check-in that knows the difference between "I'm having a great time" and "something's off."
+        </p>
+        <ul class="bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Date plan share.</strong> Send one nominated friend the venue, time, and a photo of who you're meeting — encrypted, expires automatically.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Mid-date check-in.</strong> A gentle prompt at the halfway mark — three taps for "all good," one tap for "get me out," nothing for "escalate quietly."</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Fake call.</strong> Trigger a believable incoming call from "Mum" with a tap, to give yourself a clean exit.</span>
+          </li>
+        </ul>
+      </div>
+      <div class="feature-visual">
+        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M120 60 Q60 60 60 110 Q60 160 120 200 Q180 160 180 110 Q180 60 120 60 Z" fill="#1F4332" stroke="none"/>
+          <path d="M120 75 Q75 75 75 115 Q75 155 120 185 Q165 155 165 115 Q165 75 120 75 Z" fill="#B8935A" stroke="none" opacity="0.3"/>
+          <circle cx="100" cy="115" r="6" fill="#F5EFE4"/>
+          <circle cx="140" cy="115" r="6" fill="#F5EFE4"/>
+          <path d="M100 145 Q120 160 140 145" stroke="#F5EFE4" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rideshare (paid) -->
+  <section class="feature-detail reverse">
+    <div class="wrap" style="display:contents;">
+      <div class="feature-visual">
+        <svg viewBox="0 0 240 240" fill="none" stroke="currentColor" stroke-width="1.5">
+          <rect x="60" y="100" width="120" height="50" rx="10" fill="#1F4332" stroke="none"/>
+          <path d="M75 100 L85 70 L155 70 L165 100 Z" fill="#1F4332" stroke="none"/>
+          <circle cx="85" cy="155" r="14" fill="#14302A" stroke="none"/>
+          <circle cx="155" cy="155" r="14" fill="#14302A" stroke="none"/>
+          <rect x="92" y="80" width="25" height="18" rx="2" fill="#B8935A"/>
+          <rect x="122" y="80" width="25" height="18" rx="2" fill="#B8935A"/>
+          <path d="M30 200 L210 200" stroke="#5A7A6A" stroke-width="2" stroke-dasharray="6 8"/>
+        </svg>
+      </div>
+      <div>
+        <span class="module-tag paid">Optional · Paid module</span>
+        <span class="eyebrow">Rideshare Tracker</span>
+        <h2>The trip,<br />witnessed.</h2>
+        <p class="lede">
+          For Uber, Ola, Didi, taxis. Capture the driver, the plate, the route — then have Bryndis quietly watch the journey. Off-route, prolonged stops, or arrival far from the destination triggers a check-in. Smooth ride? Nothing happens.
+        </p>
+        <ul class="bullets">
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Driver capture.</strong> One screen tap stores driver name, plate number and rideshare service, encrypted and shared only on escalation.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>Live route monitoring.</strong> Bryndis watches the route on-device against the destination. Deviations over 500m trigger a soft check-in.</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>
+            <span><strong>"I'm home" cancellation.</strong> One tap closes the trip when you're safely inside. Otherwise it auto-escalates after the expected ETA + 10 minutes.</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="wrap">
+      <span class="eyebrow" style="color:var(--gold-soft);">Available on iPhone</span>
+      <h2 style="margin-top:1.25rem;">All four core features.<br />Free, forever.</h2>
+      <p class="lede">
+        Optional modules unlock for $4.99 a month, with a portion of every subscription supporting Hands of Hope Foundation. Cancel any time, from inside the app, with one tap.
+      </p>
+      <div class="hero-ctas">
+        <a class="appstore-badge" href="https://apps.apple.com/au/app/bryndis-personal-safety/id0000000000" style="background:var(--cream); color:var(--forest);">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.53 4.08zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+          <span class="stack"><span class="small">Download on the</span><span class="big">App Store</span></span>
+        </a>
+        <a class="btn btn-ghost" href="support.html">Have a question? <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="index.html" style="color:var(--cream);">
+          <svg class="brand-mark" viewBox="0 0 100 100" aria-hidden="true">
+            <rect width="100" height="100" rx="22" fill="#F5EFE4"/>
+            <path d="M30 28 L30 72 Q30 78 36 78 L60 78 Q75 78 75 64 Q75 54 66 50 Q72 47 72 38 Q72 28 58 28 Z M42 39 L56 39 Q60 39 60 43 Q60 47 56 47 L42 47 Z M42 57 L58 57 Q63 57 63 62 Q63 67 58 67 L42 67 Z" fill="#1F4332"/>
+          </svg>
+          Bryndis
+        </a>
+        <p>Personal safety, designed in Adelaide. Built for Australian women — open everywhere.</p>
+      </div>
+      <div class="foot-col"><h5>Product</h5><ul><li><a href="features.html">Features</a></li><li><a href="index.html#download">Download</a></li><li><a href="support.html">Support</a></li></ul></div>
+      <div class="foot-col"><h5>Legal</h5><ul><li><a href="privacy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="support.html#contact">Contact</a></li></ul></div>
+      <div class="foot-col"><h5>Reach us</h5><ul><li><a href="mailto:hello@bryndis.com.au">hello@bryndis.com.au</a></li><li><a href="mailto:support@bryndis.com.au">support@bryndis.com.au</a></li><li><a href="mailto:privacy@bryndis.com.au">privacy@bryndis.com.au</a></li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Bryndis. All rights reserved.</span>
+      <span class="legal-line">BRYNDIS is a registered business name of Adam Johnson · ABN 73 260 832 724 · ASIC registered 12 May 2026.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('nav');
+  document.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 8), { passive: true });
+  const t = document.getElementById('navToggle'), l = document.getElementById('navLinks');
+  t.addEventListener('click', () => {
+    const open = l.classList.toggle('open');
+    t.classList.toggle('open', open);
+    t.setAttribute('aria-expanded', String(open));
+  });
+  l.addEventListener('click', e => {
+    if (e.target.tagName === 'A') { l.classList.remove('open'); t.classList.remove('open'); t.setAttribute('aria-expanded', 'false'); }
+  });
+</script>
+
+</body>
+</html>
