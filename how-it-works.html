@@ -48,13 +48,27 @@
 
   <section class="tight">
     <div class="wrap-narrow" style="text-align:center;">
-      <video controls playsinline preload="metadata"
+      <video id="hiw-video" controls preload="metadata"
              poster="media/bryndis-how-it-works-poster.jpg"
              width="1080" height="1920"
              style="width:100%; max-width:360px; height:auto; aspect-ratio:9/16; border-radius:28px; background:#10281E; box-shadow:0 24px 60px rgba(20,48,42,0.25);">
         <source src="media/bryndis-how-it-works.mp4" type="video/mp4" />
         Your browser can't play this video. <a href="media/bryndis-how-it-works.mp4">Download it instead.</a>
       </video>
+      <script>
+        // On a phone, play full screen so the on-screen detail is readable. Without
+        // playsinline iOS already does this; this covers the other touch browsers.
+        (function () {
+          var v = document.getElementById('hiw-video');
+          if (!v || !window.matchMedia('(pointer: coarse)').matches) return;
+          v.addEventListener('play', function () {
+            try {
+              if (v.webkitEnterFullscreen) v.webkitEnterFullscreen();
+              else if (v.requestFullscreen) v.requestFullscreen();
+            } catch (e) {}
+          });
+        })();
+      </script>
       <p class="meta" style="margin-top:1.5rem;">Bryn means armour. Dís means goddess. Bryndís is Old Norse for armoured goddess.</p>
     </div>
   </section>
