@@ -66,22 +66,22 @@
         <details class="faq-item">
           <summary>How does the SOS button actually work?</summary>
           <div class="answer">
-            <p>From the home screen, you tap the SOS bar once. For a moment you can tap Undo, so an accidental tap is easy to take back. When that moment passes, Bryndis captures your current GPS location and sends an alert to every trusted contact at the same time.</p>
-            <p>The alert is sent as a push notification first (if your contact has Bryndis installed, which is not required) and as an SMS via our delivery partner Twilio. SMS includes a tap-to-call number and a web link to view your location in any browser.</p>
+            <p>From the home screen, you tap the SOS bar once. For a moment you can tap Undo, so an accidental tap is easy to take back. When that moment passes, Bryndis captures your current GPS location and sends an alert to every trusted contact who has SOS alerts turned on, unless they've replied STOP.</p>
+            <p>The alert goes as an SMS via our delivery partner Twilio, and as a push notification if your contact also has Bryndis installed, which is not required. The SMS says you triggered an SOS and when, shows your location on a map when your phone has a fix, and tells them to call 000 if it's urgent and they can't reach you. Bryndis doesn't call 000 for you; the alert screen has a Call 000 button for that.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>Do my trusted contacts need to install Bryndis?</summary>
           <div class="answer">
-            <p>No. We built Bryndis to work even if none of your contacts have it. Your trusted contacts only need a mobile phone capable of receiving SMS. The SMS includes a link they can tap to see your live location in a web browser — no install required.</p>
+            <p>No. We built Bryndis to work even if none of your contacts have it. Your trusted contacts only need a mobile phone capable of receiving SMS. The SMS shows your location on a map they can open on any phone — no install required.</p>
           </div>
         </details>
 
         <details class="faq-item">
           <summary>What happens if my phone has no signal when I trigger an SOS?</summary>
           <div class="answer">
-            <p>If your device has no cellular or Wi-Fi connection at the moment of trigger, Bryndis stores the alert locally and retries every 15 seconds for the next 10 minutes. The instant connection is re-established, the alert is delivered, with the original trigger timestamp included so your contacts know when the event actually happened.</p>
+            <p>If the alert can't reach us, your phone opens a text to your circle, already written with what happened. Tap send, and it goes over your phone's own messaging.</p>
             <p>Find-your-car (with AR compass) works without any signal — heading data comes from your phone's compass and accelerometer.</p>
           </div>
         </details>
@@ -112,7 +112,7 @@
         <details class="faq-item">
           <summary>What information does Bryndis collect about me?</summary>
           <div class="answer">
-            <p>The short version: account details, your trusted contacts, your location only when you're actively using a feature that needs it, and basic device diagnostics. We do not collect background location, your address book, microphone or camera content, browsing history, or advertising identifiers. We do not sell or share your data with advertisers, ever.</p>
+            <p>The short version: account details, your trusted contacts, your location when you're using a feature that needs it, and basic device diagnostics. While an SOS, check-in timer, rideshare trip or shared date is active, Bryndis keeps using your location in the background, so your circle can follow you even with the screen locked. We do not collect your address book, microphone or camera content, browsing history, or advertising identifiers. We do not sell or share your data with advertisers, ever.</p>
             <p>The full version is in our <a href="privacy.html">Privacy Policy</a>.</p>
           </div>
         </details>
